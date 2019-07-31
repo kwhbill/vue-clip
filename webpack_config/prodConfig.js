@@ -136,11 +136,6 @@ module.exports =  merge.smart(baseConfig, {
                 },
             },
             {
-                test: /\.js$/,
-                loader: 'eslint-loader',
-                exclude: /node_modules/,
-            },
-            {
                 test: /\.css$/,
                 use: NODE_ENV == "production"  ? [MiniCssExtractPlugin.loader].concat(LoadersMap["css"]) : ["style-loader" ].concat(LoadersMap["css"])
             },
