@@ -13,7 +13,7 @@
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development  webpack-dev-server  --inline --hot --host  --config ./webpack_config/prodConfig.js",
-    "build": "cross-env NODE_ENV=production catalog=public webpack  --config ./webpack_config/prodConfig.js",
+    "build": "cross-env NODE_ENV=production webpack  --config ./webpack_config/prodConfig.js",
     "build-trial": "yarn install  && cross-env NODE_ENV=production catalog=trial webpack  --config ./webpack_config/prodConfig.js",
     "test": "yarn install  && cross-env NODE_ENV=test webpack  --config ./webpack_config/prodConfig.js",
     "build-dll": "cross-env NODE_ENV=production  webpack --config ./webpack_config/dllConfig.js",
