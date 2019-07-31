@@ -16,7 +16,7 @@
     "build": "cross-env NODE_ENV=production catalog=public webpack  --config ./webpack_config/prodConfig.js",
     "build-trial": "yarn install  && cross-env NODE_ENV=production catalog=trial webpack  --config ./webpack_config/prodConfig.js",
     "test": "yarn install  && cross-env NODE_ENV=test webpack  --config ./webpack_config/prodConfig.js",
-    "build-dll": "yarn install && cross-env NODE_ENV=production  webpack --config ./webpack_config/dllConfig.js",
+    "build-dll": "cross-env NODE_ENV=production  webpack --config ./webpack_config/dllConfig.js",
     "mock-gen": "node scripts/mock_gen.js"
   },
   "devDependencies": {
