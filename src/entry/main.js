@@ -1,11 +1,14 @@
 import Vue from "vue";
 import Vuex from 'vuex'
+import ElementUI from 'element-ui';
 import App from "./App";
 import Router from "vue-router";
 import router from "../router";
 import store from  "../store"
 Vue.use(Router)
 Vue.use(Vuex)
+Vue.use(ElementUI)
+import 'element-ui/lib/theme-chalk/index.css';
 import components from "src/components";
 _.each(components,(component)=>{
     Vue.component(component.name, component)

@@ -186,6 +186,16 @@ module.exports =  merge.smart(baseConfig, {
             app.all(/^\/fb\/.+/, (req, res) => {
                 mockProcess(req, res)
             })
-        }
+        },
+        proxy:{
+            '/mail': {
+              target: 'http://localhost:8089',
+              changeOrigin: true
+            },
+            '/user': {
+                target: 'http://localhost:8089',
+                changeOrigin: true
+              }
+          },
     },
 });
