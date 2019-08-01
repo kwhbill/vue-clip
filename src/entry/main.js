@@ -8,7 +8,7 @@ import store from  "../store"
 Vue.use(Router)
 Vue.use(Vuex)
 Vue.use(ElementUI)
-import 'element-ui/lib/theme-chalk/index.css';
+
 import components from "src/components";
 _.each(components,(component)=>{
     Vue.component(component.name, component)
